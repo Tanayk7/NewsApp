@@ -1,0 +1,17 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/css/style.css')
+  title Document
+  body
+    h3.app-title Simple News App
+    .articles
+        each article in articles
+            .article   
+                img.article-image(src=article.urlToImage)
+                .article-title
+                    a(href=article.url) #{article.title}
+                .article-content  #{article.content}
+                    
+        
